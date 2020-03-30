@@ -94,6 +94,8 @@ INSERT INTO `client` (`id`, `nom`, `prenom`, `adresse`, `mail`, `telephone`, `da
 
 -- --------------------------------------------------------
 
+-- --------------------------------------------------------
+
 --
 -- Structure de la table `evenement`
 --
