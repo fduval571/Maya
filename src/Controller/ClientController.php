@@ -34,7 +34,7 @@ class ClientController extends AbstractController
         }
 
 
-        // lire les races
+        // lire les clients
         $lesClients = $repository->findAll();
         // rendre la vue
         return $this->render('client/index.html.twig', [
