@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78d99e5a-4bfc-4d40-930e-b5add736f818" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Maya.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Maya.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="78d99e5a-4bfc-4d40-930e-b5add736f818" name="Default Changelist" comment="Fournisseur et Evenement">
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200330135355.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200330135534.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200330135624.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200330144936.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,8 +166,16 @@
       <workItem from="1584951968638" duration="907000" />
       <workItem from="1585574625703" duration="232000" />
       <workItem from="1585574943828" duration="4000" />
-      <workItem from="1585575860880" duration="5627000" />
+      <workItem from="1585575860880" duration="5951000" />
     </task>
+    <task id="LOCAL-00001" summary="Fournisseur et Evenement">
+      <created>1585581711001</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585581711001</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,26 +194,31 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="Fournisseur et Evenement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fournisseur et Evenement" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="690" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585580046383">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1585580046383" />
-    <state x="585" y="134" key="CommitChangelistDialog2" timestamp="1585581619959">
+    <state x="585" y="134" key="CommitChangelistDialog2" timestamp="1585581856132">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="585" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1585581619959" />
+    <state x="585" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1585581856132" />
     <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1585574693808">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1585574693808" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1585581644061">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1585581838825">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1585581644061" />
-    <state x="694" y="331" key="git4idea.merge.GitPullDialog" timestamp="1585581673727">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1585581838825" />
+    <state x="694" y="331" key="git4idea.merge.GitPullDialog" timestamp="1585581830540">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="694" y="331" key="git4idea.merge.GitPullDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1585581673727" />
+    <state x="694" y="331" key="git4idea.merge.GitPullDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1585581830540" />
   </component>
 </project>
