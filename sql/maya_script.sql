@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 30 mars 2020 à 15:23
+-- Généré le :  lun. 30 mars 2020 à 15:38
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -36,14 +36,14 @@ CREATE TABLE IF NOT EXISTS `animal` (
   `date_naissance` date NOT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_6AAB231F6E59D40D` (`race_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `animal`
 --
 
 INSERT INTO `animal` (`id`, `race_id`, `nom`, `date_naissance`) VALUES
-(3, 2, 'chat', '1992-02-10');
+(1, 2, 'test', '2020-03-31');
 
 -- --------------------------------------------------------
 
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `categorie` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `libelle` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `categorie`
@@ -91,54 +91,6 @@ CREATE TABLE IF NOT EXISTS `client` (
 
 INSERT INTO `client` (`id`, `nom`, `prenom`, `adresse`, `mail`, `telephone`, `date`) VALUES
 (3, 'DUFF', 'John', '20 rue de l\'omelette', 'johnduff@gmail.com', '0626006660', '2016-06-06');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `evenement`
---
-
-DROP TABLE IF EXISTS `evenement`;
-CREATE TABLE IF NOT EXISTS `evenement` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `titre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date` date NOT NULL,
-  `horaire` time NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `evenement`
---
-
-INSERT INTO `evenement` (`id`, `titre`, `description`, `date`, `horaire`) VALUES
-(3, 'test', 'c\'est un test', '2015-01-01', '00:00:00');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `fournisseur`
---
-
-DROP TABLE IF EXISTS `fournisseur`;
-CREATE TABLE IF NOT EXISTS `fournisseur` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `adresse` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mail` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `telephone` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nom_contact` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date_relation` date NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `fournisseur`
---
-
-INSERT INTO `fournisseur` (`id`, `nom`, `adresse`, `mail`, `telephone`, `nom_contact`, `date_relation`) VALUES
-(2, 'Jean', 'Ars-Sur-Moselle', 'jean@gmail.com', '0698829815', 'Mensoif', '2022-01-01');
 
 -- --------------------------------------------------------
 
