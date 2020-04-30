@@ -6,6 +6,9 @@ use App\Entity\Client;
 use App\Entity\ClientRecherche;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\ORM\Query;
+use Doctrine\ORM\QueryBuilder;
+
 
 /**
  * @method Client|null find($id, $lockMode = null, $lockVersion = null)
@@ -23,7 +26,7 @@ class ClientRepository extends ServiceEntityRepository
     /**
      * @return Client[]
      */
-    public function findAllByCriteria(ClientRecherche $clientRecherche): Array
+    public function findAllByCriteria(ClientRecherche $clientRecherche): Query
     {
         // le "p" est un alias utilisé dans la requête
         $qb = $this->createQueryBuilder('p')
@@ -61,8 +64,7 @@ class ClientRepository extends ServiceEntityRepository
             ->setParameter('date', $clientRecherche->getDate().'%');
     }
 
-        $query = $qb->getQuery();
-        return $query->execute();
+        return $qb->getQuery();
     }
 
 
