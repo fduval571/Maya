@@ -3,8 +3,13 @@
 namespace App\Repository;
 
 use App\Entity\Produit;
+use App\Entity\ProduitRecherche;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\ORM\Query;
+use Doctrine\ORM\QueryBuilder;
+
+
 
 /**
  * @method Produit|null find($id, $lockMode = null, $lockVersion = null)
@@ -22,22 +27,47 @@ class ProduitRepository extends ServiceEntityRepository
     /**
      * @return Product[]
      */
-    public function findAllGreaterThanPrice($prix): array
+    public function findAllOrderByLibelle(): array
     {
-        $entityManager = $this->getEntityManager();
 
-        // ce n'est pas du SQL mais du DQL : Doctrine Query Language
-        // il s'agit en fait d'une requête classique mais qui référence l'objet au lieu de la table
-        $query = $entityManager->createQuery(
-            'SELECT p
-        FROM App\Entity\Produit p
-        WHERE p.prix > :prix
-        ORDER BY p.prix ASC'
-        )->setParameter('prix', $prix);
+        $qb = $this->createQueryBuilder('p')
+            ->orderBy('p.libelle', 'ASC');
 
-        // retourne un tableau d'objets de type Produit
-        return $query->getResult();
+        $query = $qb->getQuery();
+        return $query->execute();
     }
+
+
+    /**
+     * @return Query
+     */
+    public function findAllByCriteria(ProduitRecherche $produitRecherche): Query
+    {
+        // the "p" is an alias you'll use in the rest of the query
+        $qb = $this->createQueryBuilder('p')
+            ->orderBy('p.libelle', 'ASC');
+
+        if ($produitRecherche->getLibelle()) {
+            $qb->andWhere('p.libelle LIKE :libelle')
+                ->setParameter('libelle', $produitRecherche->getLibelle().'%');
+        }
+
+        if ($produitRecherche->getPrixMini()) {
+            $qb->andWhere('p.prix >= :prixMini')
+                ->setParameter('prixMini', $produitRecherche->getPrixMini());
+        }
+
+        if ($produitRecherche->getPrixMaxi()) {
+            $qb->andWhere('p.prix < :prixMaxi')
+                ->setParameter('prixMaxi', $produitRecherche->getPrixMaxi());
+        }
+
+        return $qb->getQuery();
+//        $query = $qb->getQuery();
+//        return $query->execute();
+    }
+
+
 
 
     // /**

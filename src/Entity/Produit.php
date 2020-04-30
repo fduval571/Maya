@@ -32,10 +32,11 @@ class Produit
     private $libelle;
 
     /**
-     * @ORM\Column(type="decimal")
+     * @ORM\Column(type="decimal", precision=7, scale=2)
      * @Assert\NotBlank(message = "Prix obligatoire")
      * @Assert\Range(min = 0.1, max = 999)
      */
+
 
     private $prix;
 
@@ -79,21 +80,23 @@ class Produit
     private $cuit;
 
     /**
+     * @ORM\Column(type="boolean")
+     */
+
+    private $bio;
+
+    /**
      * @ORM\Column(type="date", nullable=true)
      * @Assert\Type("\DateTime")
      */
     private $debutDisponibilite;
 
     /**
-     * @ORM\Column(type="boolean")
-     */
-    private $bio;
-
-    /**
      * @ORM\Column(type="date", nullable=true)
      * @Assert\Type("\DateTime")
      * @Assert\Range(minPropertyPath="debutDisponibilite")
      */
+
     private $finDisponibilite;
 
     public function getId(): ?int
