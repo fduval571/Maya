@@ -29,36 +29,36 @@ class ClientRepository extends ServiceEntityRepository
         $qb = $this->createQueryBuilder('p')
             ->orderBy('p.nom', 'ASC');
 
-        if ($produitRecherche->getNom()) {
+        if ($clientRecherche->getNom()) {
             $qb->andWhere('p.nom LIKE :nom')
-                ->setParameter('nom', $produitRecherche->getNom().'%');
+                ->setParameter('nom', $clientRecherche->getNom().'%');
         }
 
-        if ($produitRecherche->getPrenom()) {
+        if ($clientRecherche->getPrenom()) {
             $qb->andWhere('p.prenom LIKE :prenom')
-                ->setParameter('prenom', $produitRecherche->getPrenom().'%');
+                ->setParameter('prenom', $clientRecherche->getPrenom().'%');
         }
 
-        if ($produitRecherche->getAdresse()) {
+        if ($clientRecherche->getAdresse()) {
             $qb->andWhere('p.adresse LIKE :adresse')
-                ->setParameter('adresse', $produitRecherche->getAdresse().'%');
+                ->setParameter('adresse', $clientRecherche->getAdresse().'%');
 
         }
 
-        if ($produitRecherche->getMail()) {
+        if ($clientRecherche->getMail()) {
             $qb->andWhere('p.mail LIKE :mail')
-                ->setParameter('mail', $produitRecherche->getNom().'%');
+                ->setParameter('mail', $clientRecherche->getNom().'%');
 
         }
 
-        if ($produitRecherche->getTelephone()) {
+        if ($clientRecherche->getTelephone()) {
             $qb->andWhere('p.telephone LIKE :telephone')
-                ->setParameter('telephone', $produitRecherche->getTelephone().'%');
+                ->setParameter('telephone', $clientRecherche->getTelephone().'%');
         }
 
-        if ($produitRecherche->getDate()) {
+        if ($clientRecherche->getDate()) {
         $qb->andWhere('p.date LIKE :date')
-            ->setParameter('date', $produitRecherche->getDate().'%');
+            ->setParameter('date', $clientRecherche->getDate().'%');
     }
 
         $query = $qb->getQuery();
